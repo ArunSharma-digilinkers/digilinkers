@@ -1,0 +1,7 @@
+*
+!private/
+!public/
+!.gitignore
+# Ignore all Google credentials
+/storage/app/google/*.json
+
