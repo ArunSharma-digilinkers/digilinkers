@@ -11,6 +11,8 @@
 <p><strong>Name:</strong> {{ $data['name'] }}</p>
 <p><strong>Email:</strong> {{ $data['email'] }}</p>
 <p><strong>Phone:</strong> {{ $data['phone'] }}</p>
+<p><strong>Company:</strong> {{ $data['company'] ?? 'Not provided' }}</p>
+<p><strong>Service Required:</strong> {{ $data['service'] ?? 'Not provided' }}</p>
 <p><strong>Requirement:</strong></p>
 <p>{{ $data['requirement'] }}</p>
 

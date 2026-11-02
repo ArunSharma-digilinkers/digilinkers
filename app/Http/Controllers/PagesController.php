@@ -20,7 +20,8 @@ class PagesController extends Controller
     
     public function index(){
         $clients = Client::all();
-        return view('pages.index', ['clients' => $clients]);
+        $portfolios = Portfolio::latest()->take(6)->get();
+        return view('pages.index', ['clients' => $clients, 'portfolios' => $portfolios]);
     }
 
     public function aboutus(){
@@ -85,6 +86,8 @@ class PagesController extends Controller
         'email' => 'required|email|max:255',
         'phone' => 'required|digits:10',
         'requirement' => 'required|string',
+        'company' => 'nullable|string|max:255',
+        'service' => 'nullable|string|max:255',
         'source_page' => 'nullable|url',
     ]);
 
@@ -100,6 +103,8 @@ class PagesController extends Controller
         'email' => $request->input('email'),
         'phone' => $request->input('phone'),
         'requirement' => $request->input('requirement'),
+        'company' => $request->input('company'),
+        'service' => $request->input('service'),
         'source_page' => $request->input('source_page')
     ];
 

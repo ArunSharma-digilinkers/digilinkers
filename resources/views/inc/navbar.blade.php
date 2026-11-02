@@ -26,49 +26,15 @@
             <span class="navbar-toggler-icon"></span>
         </button>
         <div class="collapse navbar-collapse" id="navbarNav">
-            <ul class="navbar-nav ms-auto">
+            <ul class="navbar-nav ms-auto align-items-lg-center">
                 <li class="nav-item"><a class="nav-link active" href="{{ url('/') }}">Home</a></li>
-                <li class="nav-item"><a class="nav-link" href="{{ url('about-us') }}">About</a></li>
-                <li class="nav-item dropdown">
-                    <a class="nav-link dropdown-toggle" href="#" id="servicesDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                       Development
-                    </a>
-                    <ul class="dropdown-menu" aria-labelledby="servicesDropdown">
-                        <li><a class="dropdown-item" href="{{ url('website-designing') }}">Custom Website Designing</a></li>
-                        <li><a class="dropdown-item" href="{{ url('e-commerce-website') }}">E-commerce Website</a></li>
-                        <li><a class="dropdown-item" href="{{ url('wordpress-development') }}">Wordpress Development</a></li>
-                        <li><a class="dropdown-item" href="{{ url('apps-development') }}">App Development</a></li>
-                        <li><a class="dropdown-item" href="{{ url('landing-page-design') }}">Landing Page Design</a></li>
-                        <li><a class="dropdown-item" href="{{ url('shopify-development') }}">Shopify Development</a></li>
-                    </ul>
+                <li class="nav-item"><a class="nav-link" href="{{ url('about-us') }}">About Us</a></li>
+                <li class="nav-item"><a class="nav-link" href="{{ url('/') }}#be-found">Be Found</a></li>
+                <li class="nav-item"><a class="nav-link" href="{{ url('/') }}#be-built">Be Built</a></li>
+                <li class="nav-item"><a class="nav-link" href="{{ url('/') }}#be-organized">Be Organized</a></li>
+                <li class="nav-item nav-item-cta">
+                    <a class="nav-cta-btn" href="{{ url('contact-us') }}">Contact Us</a>
                 </li>
-                <li class="nav-item dropdown">
-                    <a class="nav-link dropdown-toggle" href="#" id="servicesDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                       Digital Marketing
-                    </a>
-                    <ul class="dropdown-menu" aria-labelledby="servicesDropdown">
-                        <li><a class="dropdown-item" href="{{ url('social-media-marketing') }}">Social Media Marketing(SMM)</a></li>
-                        <li><a class="dropdown-item" href="{{ url('search-engine-optimization') }}">Search Engine Optimization(SEO)</a></li>
-                        <li><a class="dropdown-item" href="{{ url('google-adword') }}">Google Adword Management</a></li>
-                        <li><a class="dropdown-item" href="{{ url('brand-building') }}">Brand Building</a></li>
-                    </ul>
-                </li>
-                <li class="nav-item dropdown">
-                    <a class="nav-link dropdown-toggle" href="#" id="servicesDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                       Industry
-                    </a>
-                    <ul class="dropdown-menu" aria-labelledby="servicesDropdown">
-                        <li><a class="dropdown-item" href="{{ url('battery-industry') }}">Battery Industry</a></li>
-                        <li><a class="dropdown-item" href="{{ url('ev-charger') }}">EV Charger</a></li>
-                        <li><a class="dropdown-item" href="{{ url('travel-industry') }}">Travel Industry</a></li>
-                        <li><a class="dropdown-item" href="{{ url('furniture-industry') }}">Furniture Industry</a></li>
-                        <li><a class="dropdown-item" href="{{ url('real-state-industry') }}">Real State Industry</a></li>
-                    </ul>
-                </li>
-                <li class="nav-item"><a class="nav-link" href="{{ url('conference-services') }}">Conference Services</a></li>
-                <li class="nav-item"><a class="nav-link" href="{{ url('blog') }}">Blog</a></li>
-                <li class="nav-item"><a class="nav-link" href="{{ url('portfolio') }}">Portfolio</a></li>
-                <li class="nav-item"><a class="nav-link" href="{{ url('contact-us') }}">Contact</a></li>
             </ul>
         </div>
     </div>

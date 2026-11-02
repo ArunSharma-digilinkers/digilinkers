@@ -1,512 +1,335 @@
 @extends('layouts.main')
-@section('title', 'Best Digital Marketing Company Delhi, India | Digilinkers')
+@section('title', 'Be Found. Be Built. Be Organized. | Digilinkers - Solar, Battery, Lithium & EV Charger Growth Partner')
 
-@section('description', 'Digilinkers- No.1 ✅ Top Digital Marketing Services Agency in Delhi, India offering best SEO,
-SMO & Web Development services. ✅ 500+ Happy clients.')
+@section('description', 'Digilinkers is a business growth platform for solar, battery, lithium and EV charger companies - digital marketing, website development and Groove HR software under one roof.')
 
-@section('keywords', 'Digital Marketing Company Delhi, SEO Company Delhi, Digital Marketing Agency, Digital Marketing
-Company India, Best SEO Services, Best SEO Services Company India, Best SEO Services in India, Web Development Company,
-Top SEO Services in India')
+@section('keywords', 'Digital Marketing Company Delhi, Solar Digital Marketing, Battery Industry Marketing, Lithium Industry SEO,
+EV Charger Marketing, Website Development Company, Groove HR, SEO Company Delhi, Digital Marketing Agency India')
 @section('content')
 
 <main>
 
-    <!-- Animated Carousel -->
-    <div id="seoCarousel" class="carousel slide" data-bs-ride="carousel">
-        <div class="carousel-inner">
-            <div class="carousel-item active">
-                <img src="{{ asset('img/banner.webp') }}"  alt="SEO Strategy" width="1920" height="800" class="img-fluid w-100" fetchpriority="high" decoding="async">
-                <!-- <div class="carousel-caption d-none d-md-block">
-                    <h5>Boost Your Rankings</h5>
-                    <p>Optimize your website for better search engine visibility.</p>
-                </div> -->
-            </div>
-            <!-- <div class="carousel-item">
-                        <img src="/images/seo2.jpg" class="d-block w-100" alt="SEO Growth">
-                        <div class="carousel-caption d-none d-md-block">
-                            <h5>Increase Organic Traffic</h5>
-                            <p>Get more visitors without paid ads.</p>
-                        </div>
-                    </div> -->
-            <!-- <div class="carousel-item">
-                        <img src="/images/seo3.jpg" class="d-block w-100" alt="SEO Success">
-                        <div class="carousel-caption d-none d-md-block">
-                            <h5>Enhance User Experience</h5>
-                            <p>Improve usability and engagement on your site.</p>
-                        </div>
-                    </div> -->
-        </div>
-        <button class="carousel-control-prev" type="button" data-bs-target="#seoCarousel" data-bs-slide="prev">
-            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-            <span class="visually-hidden">Previous</span>
-        </button>
-        <button class="carousel-control-next" type="button" data-bs-target="#seoCarousel" data-bs-slide="next">
-            <span class="carousel-control-next-icon" aria-hidden="true"></span>
-            <span class="visually-hidden">Next</span>
-        </button>
-    </div>
-    <div class="hm-social-icons-wrapper pt-5 pb-5">
+    <!-- 1.1 Hero Banner -->
+    <section class="rb-hero">
+        <span class="rb-glow-orb rb-glow-blue rb-glow-orb-1"></span>
+        <span class="rb-glow-orb rb-glow-purple rb-glow-orb-2"></span>
+        <span class="rb-glow-orb rb-glow-yellow rb-glow-orb-3"></span>
+
         <div class="container">
-            <div class="row">
-                <div class="col-lg-12">
-                    <div class="row">
-                        <div class="col-lg-2 col-md-4 col-sm-6 col-6">
-                        <a href="https://www.linkedin.com/company/digilinkers" target="_blank">
-                            <div class="social-inner-wrap">
-                                <div class="social-icon">
-                                    <i class="fa-brands fa-linkedin"></i>
-                                </div>
-                                <div class="social-txt">
-                                    <h6>LinkedIn<br><span>Let's Connect</span></h6>
-                                </div>
-                            </div>
-                           </a>
-                        </div>
-                        <div class="col-lg-2 col-md-4 col-sm-6 col-6">
-                        <a href="https://www.instagram.com/digilinkers/" target="_blank">
-                            <div class="social-inner-wrap">
-                                <div class="social-icon">
-                                    <i class="fa-brands fa-square-instagram"></i>
-                                </div>
-                                <div class="social-txt">
-                                    <h6>Instagram<br><span>Follow Us</span></h6>
-                                </div>
-                            </div>
-                        </a>
-                        </div>
-                        <div class="col-lg-2 col-md-4 col-sm-6 col-6">
-                            <a href="https://www.facebook.com/Digilinkers" target="_blank">
-                            <div class="social-inner-wrap">
-                                <div class="social-icon">
-                                    <i class="fa-brands fa-square-facebook"></i>
-                                </div>
-                                <div class="social-txt">
-                                    <h6>Facebook<br><span>Like & Follow</span></h6>
-                                </div>
-                            </div>
-                        </a>
-                        </div>
-                        <div class="col-lg-2 col-md-4 col-sm-6 col-6">
-                        <a href="https://www.youtube.com/@Digilinkers" target="_blank">
-                            <div class="social-inner-wrap">
-                                <div class="social-icon">
-                                    <i class="fa-brands fa-square-youtube"></i>
-                                </div>
-                                <div class="social-txt">
-                                    <h6>YouTube<br><span>Subscribe</span></h6>
-                                </div>
-                            </div>
-                         </a>
-                        </div>
-                        <div class="col-lg-2 col-md-4 col-sm-6 col-6">
-                        <a href="https://x.com/digilinkers" target="_blank">
-                            <div class="social-inner-wrap">
-                                <div class="social-icon">
-                                    <i class="fa-brands fa-x-twitter"></i>
-                                </div>
-                                <div class="social-txt">
-                                    <h6>Twitter<br><span>Like & Follow</span></h6>
-                                </div>
-                            </div>
-                       </a>
-                        </div>
-                        <div class="col-lg-2 col-md-4 col-sm-6 col-6">
-                        <a href="https://g.page/r/Cc9UuDJ0iKx9EAE/review" target="_blank">
-                            <div class="social-inner-wrap">
-                                <div class="social-icon">
-                                    <i class="fa-brands fa-google"></i>
-                                </div>
-                                <div class="social-txt">
-                                    <h6>Google Reviews<br><span>Read Reviews</span></h6>
-                                </div>
-                            </div>
-                         </a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-    <div class="hm-about-wrapper section-entry">
-        <div class="container">
-            <div class="row">
-                <div class="col-lg-6 col-md-12 col-sm-12">
-                    <div class="hm-about-wrap">
-                        <h1>
-                            <span>Grow Faster with the No.1</span> <br>Digital Marketing Agency in Delhi
+            <div class="row align-items-center">
+                <div class="col-lg-6">
+                    <div class="rb-hero-text">
+                        <span class="rb-eyebrow">Business Growth Platform for Solar, Battery, Lithium &amp; EV Charger Brands</span>
+                        <h1 class="rb-motto">
+                            Be&nbsp;Found. <span>Be&nbsp;Built.</span> Be&nbsp;Organized.
                         </h1>
-                        <h3>
-                            Performance-Driven SEO, Website Development & Social Media Marketing that Scales Your Business
-                        </h3>
-                        <p>
-                           Being a reliable <strong>Digital Marketing Agency in Delhi</strong>, we help your business grow with SEO, websites, and social media marketing services. We are your trusted digital partner to make online marketing simple and effective. Get more visitors, more customers, and better results with our <strong>social media management services</strong>, SEO services, paid ads, and professional website development. With our expert Digital Marketing Services in Delhi, we are here to turn your digital goals into reality.
+                        <p class="rb-hero-sub">
+                            Digital marketing, website development, and HR software solutions for solar,
+                            battery, lithium, and EV charger businesses.
                         </p>
 
-                        <p>
-                          If you want to get noticed online and attract more customers, we have the right plan for you. Our team of experts brings <strong>strategies</strong>, <strong>ideas</strong>, and <strong>energy</strong> to help <strong>your business grow.</strong> By reaching the right audience at the right time, we help you succeed. Join hands with us and take <strong>your brand to new heights</strong>. Give us any product and watch us transform it! Your journey with us is the start of something extraordinary. We bring to you services that make your digital journey impactful.
-                        </p>
+                        <ul class="rb-industry-chips">
+                            <li><i class="fa-solid fa-solar-panel"></i> Solar</li>
+                            <li><i class="fa-solid fa-car-battery"></i> Battery</li>
+                            <li><i class="fa-solid fa-atom"></i> Lithium</li>
+                            <li><i class="fa-solid fa-charging-station"></i> EV Chargers</li>
+                        </ul>
 
-                         <div id="counters" class="counters">
-                            <div class="item">
-                                <h4 class="counts" data-number="0">250</h4>
-                                <h5 class="text">Active Clients</h5>
-                            </div>
-                            <div class="item">
-                                <h4 class="counts" data-number="0">3000</h4>
-                                <h5 class="text">Projects Done</h5>
-                            </div>
-                            <div class="item">
-                                <h4 class="counts" data-number="0">25</h4>
-                                <h5 class="text">Team Advisor</h5>
-                            </div>
-                        </div>
-                        <div class="default-btn mt-4">
-                            <button type="button"  data-bs-toggle="modal" data-bs-target="#formModal">
-                                Get a Free Consultation
-                            </button>
+                        <div class="rb-hero-actions">
+                            <a href="#contact" class="rb-btn rb-btn-primary">Contact Us</a>
+                            <a href="#how-we-help" class="rb-btn rb-btn-secondary">Explore Services</a>
                         </div>
                     </div>
                 </div>
-                <div class="col-lg-6 col-md-12 col-sm-12">
-                    <div class="row">
-                        <div class="col-lg-6 col-md-6 col-sm-12 mrt30">
-                            <div class="hm-about-box box-1">
-                                <div class="hm-about-icon-wrap">
-                                    <i class="fa-solid fa-globe"></i>
-                                </div>
-                                <h5>Website Development Services</h5>
-                                <p>
-                                 Your website, but make it wow! We build stunning sites that turn visitors into loyal fans.
-                                </p>
-                            </div>
-                        </div>
-                        <div class="col-lg-6 col-md-6 col-sm-12">
-                            <div class="hm-about-box box-2">
-                                <div class="hm-about-icon-wrap">
-                                    <i class="fa-solid fa-globe"></i>
-                                </div>
-                                <h5>Social Media Marketing (SMO)</h5>
-                                <p>
-                                  We’re the storytellers your brand needs! From Instagram reels to LinkedIn posts, we create content that clicks, connects, and grows your audience like never before.
-                                </p>
-                            </div>
-                        </div>
-                        <div class="col-lg-6 col-md-6 col-sm-12 mrt30">
-                            <div class="hm-about-box box-3">
-                                <div class="hm-about-icon-wrap">
-                                    <i class="fa-solid fa-globe"></i>
-                                </div>
-                                <h5>Search Engine Optimization (SEO)</h5>
-                                <p>
-                                  Be seen, be found, be loved! Our SEO strategies put your brand on top and keep you there.
-                                </p>
-                            </div>
-                        </div>
-                        <div class="col-lg-6 col-md-6 col-sm-12">
-                            <div class="hm-about-box box-4">
-                                <div class="hm-about-icon-wrap">
-                                    <i class="fa-solid fa-globe"></i>
-                                </div>
-                                <h5>Paid Ads (Google & Meta)</h5>
-                                <p>
-                                    Clicks that convert, ads that sell! We design campaigns that connect you to the right audience. 
-                                </p>
-                            </div>
-                        </div>
+
+                <div class="col-lg-6">
+                    <div class="rb-hero-visual">
+                        <a href="#be-found" class="rb-float-card rb-float-card-a">
+                            <span class="rb-float-icon"><i class="fa-solid fa-magnifying-glass"></i></span>
+                            <span class="rb-float-title">Be Found</span>
+                            <span class="rb-float-sub">SEO · SMO · Ads</span>
+                        </a>
+                        <a href="#be-built" class="rb-float-card rb-float-card-b">
+                            <span class="rb-float-icon"><i class="fa-solid fa-code"></i></span>
+                            <span class="rb-float-title">Be Built</span>
+                            <span class="rb-float-sub">Websites · E-commerce</span>
+                        </a>
+                        <a href="#be-organized" class="rb-float-card rb-float-card-c">
+                            <span class="rb-float-icon"><i class="fa-solid fa-sitemap"></i></span>
+                            <span class="rb-float-title">Be Organized</span>
+                            <span class="rb-float-sub">Groove HR</span>
+                        </a>
+                        <span class="rb-hero-visual-ring"></span>
                     </div>
                 </div>
             </div>
         </div>
-    </div>
-    <section class="service-intro-section section-entry">
-    <div class="container">
-        <div class="row align-items-center">
-            
-            <!-- Left Content -->
-            <div class="col-lg-6">
-                <span class="section-tag">Digital Marketing Services</span>
+    </section>
 
-                <h2 class="section-title">
-                    Choose our trusted <span>Digital Marketing Services in Delhi</span>
-                </h2>
+    <!-- 1.2 Why These 4 Industries Need Digital Marketing -->
+    <section class="rb-section rb-why" id="why-digital">
+        <span class="rb-glow-orb rb-glow-blue rb-glow-orb-soft rb-glow-orb-tr"></span>
+        <span class="rb-glow-orb rb-glow-yellow rb-glow-orb-soft rb-glow-orb-bl"></span>
 
-                <p class="section-desc">
-                    Tired of juggling your social media? We get it! With over 7 years of experience,
-                    we’re a top digital marketing company in Delhi crafting customized strategies
-                    with seamless execution.
-                </p>
-
-                <p class="section-desc">
-                    Our services save you time, boost your reach, and drive real results—turning
-                    your brand vision into measurable success.
+        <div class="container">
+            <div class="rb-section-head text-center">
+                <span class="rb-tag">Why It Matters</span>
+                <h2>Why Solar, Battery, Lithium &amp; EV Charger Businesses Need a Strong Digital Presence</h2>
+                <p class="rb-section-desc">
+                    These industries are growing fast, but customers, dealers, distributors, and business
+                    buyers almost always search online before making a decision.
                 </p>
             </div>
 
-            <!-- Right Image -->
-            <div class="col-lg-6 text-center">
-                <img src="{{ asset('img/best-digitalmerking.jpg') }}"
-                     alt="Digital Marketing Services in Delhi"
-                     class="img-fluid service-intro-img">
+            <div class="rb-checklist-grid">
+                <div class="rb-checklist-item"><i class="fa-solid fa-circle-check"></i> Customers search online before contacting a company</div>
+                <div class="rb-checklist-item"><i class="fa-solid fa-circle-check"></i> Dealers and distributors compare brands digitally</div>
+                <div class="rb-checklist-item"><i class="fa-solid fa-circle-check"></i> Product education is important in technical industries</div>
+                <div class="rb-checklist-item"><i class="fa-solid fa-circle-check"></i> Search visibility helps generate qualified enquiries</div>
+                <div class="rb-checklist-item"><i class="fa-solid fa-circle-check"></i> Good websites build trust before the first call</div>
+                <div class="rb-checklist-item"><i class="fa-solid fa-circle-check"></i> Social media keeps the brand active and visible</div>
+                <div class="rb-checklist-item"><i class="fa-solid fa-circle-check"></i> Blogs and SEO content help answer buyer questions</div>
             </div>
 
-        </div>
-    </div>
-</section>
-    <div class="call-action-wrapper section-entry">
-        <div class="container">
-            <div class="row">
-                <div class="col-lg-9 col-md-9 col-sm-12">
-                    <div class="call-action-txt-wrap">
-                        <h3 class="text-white">Build, Grow, Dominate the Digital space with Us</h3>
-                        <p>
-                            Let’s turn your digital dreams into reality! Whether you need a stronger online presence,
-                            better engagement, or more leads, we’ve got the strategy for you.
-                        </p>
-                    </div>
+            <div class="rb-industry-grid">
+                <div class="rb-industry-card rb-industry-card--solar">
+                    <div class="rb-industry-icon"><i class="fa-solid fa-solar-panel"></i></div>
+                    <h4>Solar</h4>
+                    <p>Solar businesses need visibility for products, services, projects, and local enquiries.</p>
                 </div>
-                <div class="col-lg-3 col-md-3 col-sm-12">
-                <div class="default-btn-two mt-4">
-                            <button type="button"  data-bs-toggle="modal" data-bs-target="#formModal">
-                               Enquiry Now
-                            </button>
-                        </div>
-                </div>
-            </div>
-        </div>
-    </div>
 
-    <div class="hm-expertise-wrapper section-entry">
-        <div class="container">
-            <div class="row">
-                <div class="col-lg-12 col-md-12 col-sm-12">
-                    <div class="hm-why-box text-center">
-                        <h6>Industry Expertise</h6>
-                        <h3>Delivering Best Practice expertise since 2019 </h3>
-                    </div>
+                <a href="{{ url('battery-industry') }}" class="rb-industry-card rb-industry-card-link rb-industry-card--battery">
+                    <div class="rb-industry-icon"><i class="fa-solid fa-car-battery"></i></div>
+                    <h4>Battery</h4>
+                    <p>Battery brands need stronger product discovery, dealer enquiries, and trust-building content.</p>
+                    <span class="rb-card-link-txt">Learn more <i class="fa-solid fa-arrow-right-long"></i></span>
+                </a>
+
+                <div class="rb-industry-card rb-industry-card--lithium">
+                    <div class="rb-industry-icon"><i class="fa-solid fa-atom"></i></div>
+                    <h4>Lithium</h4>
+                    <p>Lithium companies need clear technical explanation, SEO content, and B2B lead generation.</p>
                 </div>
-            </div>
-            <div class="row">
-                <div class="col-lg-6 col-md-6 col-sm-12">
-                    <div class="expertise-box expertise-wrap-1">
-                        <img src="{{ asset('img/battery-industry.webp') }}" alt="Battery Industry" class="img-fluid" loading="lazy">
-                        <div class="expertise-txt-wrap">
-                            <h4>Battery Industry</h4>
-                            <p>
-                                We’ve juiced up the digital game for some of the top battery brands out there! From powering visibility to sparking sales, our work keeps their brands fully charged and unstoppable. Ready to join the charge?
-                            </p>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-6 col-md-6 col-sm-12">
-                    <div class="expertise-box expertise-wrap-2">
-                        <img src="{{ asset('img/living-room.webp') }}" alt="Furniture Industry" class="img-fluid" loading="lazy">
-                        <div class="expertise-txt-wrap">
-                            <h4>Furniture Industry
-                            </h4>
-                            <p>
-                                We’ve helped top furniture brands make their mark online! From cozy couches to sleek office setups, our campaigns showcase their craftsmanship and style, turning browsers into loyal customers.
-                            </p>
-                  </div>
-                    </div>
-                </div>
-            </div>
-            <div class="row">
-            <div class="col-lg-6 col-md-6 col-sm-12">
-                    <div class="expertise-box expertise-wrap-2">
-                        <img src="{{ asset('img/plumbing.webp') }}" alt="Appliances Industry" class="img-fluid" loading="lazy">
-                        <div class="expertise-txt-wrap">
-                            <h4>Appliances Industry</h4>
-                            <p>
-                                We’ve powered up leading appliance brands with digital marketing that clicks! From visibility boosts to sales sparks, we make sure their products get noticed and loved.
-                            </p>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-6 col-md-6 col-sm-12">
-                    <div class="expertise-box expertise-wrap-1">
-                        <img src="{{ asset('img/printer.webp') }}" alt="Printing & Packaging Industry" class="img-fluid" loading="lazy">
-                        <div class="expertise-txt-wrap">
-                            <h4>Printing & Packaging Industry</h4>
-                            <p>
-                                We’ve printed success stories for the best in the business! By boosting visibility, we help printing and packaging brands package their growth in style.
-                            </p>
-                        </div>
-                    </div>
-                </div>
+
+                <a href="{{ url('ev-charger') }}" class="rb-industry-card rb-industry-card-link rb-industry-card--ev">
+                    <div class="rb-industry-icon"><i class="fa-solid fa-charging-station"></i></div>
+                    <h4>EV Chargers</h4>
+                    <p>EV Charger brands need awareness, installation enquiries, and product education.</p>
+                    <span class="rb-card-link-txt">Learn more <i class="fa-solid fa-arrow-right-long"></i></span>
+                </a>
             </div>
         </div>
-    </div>
-    <div class="testimonials-wrapper pt-5">
+    </section>
+
+    <!-- 1.3 How Digilinkers Helps -->
+    <section class="rb-section rb-pillars-wrapper" id="how-we-help">
+        <span class="rb-glow-orb rb-glow-blue rb-glow-orb-4"></span>
+        <span class="rb-glow-orb rb-glow-purple rb-glow-orb-5"></span>
+        <span class="rb-glow-orb rb-glow-yellow rb-glow-orb-6"></span>
+
         <div class="container">
-            <div class="row">
-            <div class="col-lg-4 col-md-4 col-sm-12">
-                    <div class="test-box">
-                        <h2 class="text-white">
-                            What Our Clients Say About Us
-                        </h2>
-                        <p>
-                        At Digilinkers, we are committed to providing top-notch healthcare equipment and services with reliability and innovation. Our clients trust us for our quality, expertise, and dedication. Here’s what they have to say about their experience with us!
-                        </p>
+            <div class="rb-section-head text-center">
+                <span class="rb-tag rb-tag-light">How Digilinkers Helps</span>
+                <h2 class="text-white">We Don't Just Market Your Business</h2>
+                <p class="rb-section-desc rb-section-desc-light">
+                    We help it become visible, build the right platform, and organize its internal workflow.
+                </p>
+            </div>
+
+            <!-- Be Found -->
+            <div class="rb-pillar rb-pillar--found" id="be-found">
+                <div class="rb-pillar-head">
+                    <span class="rb-pillar-index">01</span>
+                    <div>
+                        <h3>Be Found</h3>
+                        <p>Digilinkers helps businesses become visible online through:</p>
                     </div>
                 </div>
-                <div class="col-lg-8 col-md-8 col-sm-12">
-                    <div class="testimonial-review owl-carousel owl-theme">
-                        <div class="item">
-                            <div class="review-box">
-                                <div class="test-info-box">
-                                    <div class="review-img-box">
-                                        <img src="{{ asset('img/deepan-garg.jpg') }}"
-                                            class="img-fluid" loading="lazy">
-                                    </div>
-                                    <div class="review-txt-box">
-                                        <h4>
-                                            Mr. Jasbir Saini
-                                        </h4>
-                                        <h6>Ruchira Printing & Packaging</h6>
-                                    </div>
-                                </div>
-                                <p>
-                                    It has been an absolute pleasure working with the team at Digilinkers. Their
-                                    professionalism and genuine passion for their work have truly stood out. We are
-                                    extremely satisfied with the exceptional service they consistently provide.
-                                    The Digilinkers team has played a key role in managing our social media pages,
-                                    crafting engaging posts, and responding to our followers with efficiency and
-                                    care. Their responsiveness and attention to detail have been invaluable,
-                                    ensuring that our social media presence is always on point.
-                                </p>
-                            </div>
-                        </div>
-                        <div class="item">
-                            <div class="review-box">
-                                <div class="test-info-box">
-                                    <div class="review-img-box">
-                                        <img src="{{ asset('img/ashish-sinha.jpg') }}"
-                                            class="img-fluid" loading="lazy">
-                                    </div>
-                                    <div class="review-txt-box">
-                                        <h4>
-                                            Mr. Ashish Sinha
-                                        </h4>
-                                        <h6>Vice President, Matrix battery</h6>
-                                    </div>
-                                </div>
-                                <p>
-                                    Working with Digilinkers has been a smooth experience! The team demonstrated
-                                    exceptional professionalism and dedication throughout the entire project. From
-                                    understanding our unique needs to delivering a customized solution, they met our
-                                    expectations in every aspect.
-                                    The team’s approach to addressing issues showed their commitment to delivering
-                                    quality results. Overall, we are pleased with the results and look forward to
-                                    collaborating with them again on future projects.
-                                </p>
-                            </div>
-                        </div>
-                        <div class="item">
-                            <div class="review-box">
-                                <div class="test-info-box">
-                                    <div class="review-img-box">
-                                        <img src="{{ asset('img/aniket.jpg') }}" class="img-fluid" loading="lazy">
-                                    </div>
-                                    <div class="review-txt-box">
-                                        <h4>
-                                            Mr. Aniket
-                                        </h4>
-                                        <h6>Emiko</h6>
-                                    </div>
-                                </div>
-                                <p>
-                                    Working with Digilinkers has been an absolute pleasure. Your expertise in
-                                    digital marketing and your ability to deliver measurable results have
-                                    significantly elevated our brand's online presence. However, what truly sets you
-                                    apart is your creativity and innovative approach. As we continue our
-                                    collaboration, I would love to see even more focus on out-of-the-box strategies
-                                    that resonate with our brand's unique identity. Perhaps concepts like viral
-                                    campaigns, creative storytelling, or leveraging trends in innovative ways to
-                                    make our brand stand out and connect emotionally with our audience could take
-                                    things to the next level.
-                                    Your work has already had a positive impact, and I believe that with a sharper
-                                    focus on creativity and virality, we can achieve even greater visibility and
-                                    engagement. Thank you for your dedication, and I look forward to what’s next!
-                                </p>
-                            </div>
-                        </div>
+                <ul class="rb-pillar-chips">
+                    <li><a href="{{ url('search-engine-optimization') }}">SEO</a></li>
+                    <li><a href="{{ url('social-media-marketing') }}">SMO</a></li>
+                    <li><a href="{{ url('social-media-marketing') }}">Social Media Marketing</a></li>
+                    <li><span>Graphic Design</span></li>
+                    <li><span>Content Creation</span></li>
+                    <li><a href="{{ url('google-adword') }}">Google Ads</a></li>
+                    <li><span>Meta Ads</span></li>
+                    <li><a href="{{ url('brand-building') }}">Brand Visibility Campaigns</a></li>
+                </ul>
+            </div>
+
+            <!-- Be Built -->
+            <div class="rb-pillar rb-pillar--built" id="be-built">
+                <div class="rb-pillar-head">
+                    <span class="rb-pillar-index">02</span>
+                    <div>
+                        <h3>Be Built</h3>
+                        <p>Digilinkers helps businesses build strong digital platforms through:</p>
                     </div>
                 </div>
+                <ul class="rb-pillar-chips">
+                    <li><a href="{{ url('website-designing') }}">Website Design</a></li>
+                    <li><a href="{{ url('website-designing') }}">Website Development</a></li>
+                    <li><a href="{{ url('wordpress-development') }}">WordPress Development</a></li>
+                    <li><a href="{{ url('shopify-development') }}">Shopify Development</a></li>
+                    <li><a href="{{ url('landing-page-design') }}">Landing Pages</a></li>
+                    <li><a href="{{ url('e-commerce-website') }}">E-commerce Websites</a></li>
+                    <li><span>Product Catalogue Websites</span></li>
+                    <li><span>Website Maintenance</span></li>
+                </ul>
+            </div>
+
+            <!-- Be Organized -->
+            <div class="rb-pillar rb-pillar--organized" id="be-organized">
+                <div class="rb-pillar-head">
+                    <span class="rb-pillar-index">03</span>
+                    <div>
+                        <h3>Be Organized</h3>
+                        <p>Digilinkers helps businesses organize internal operations through <strong>Groove HR</strong>:</p>
+                    </div>
+                </div>
+                <ul class="rb-pillar-chips">
+                    <li><span>Employee Management</span></li>
+                    <li><span>Attendance Management</span></li>
+                    <li><span>Leave Management</span></li>
+                    <li><span>HR Records</span></li>
+                    <li><span>Team Organization</span></li>
+                    <li><span>Reports</span></li>
+                    <li><span>Workflow Tracking</span></li>
+                </ul>
+                <a href="#contact" class="rb-btn rb-btn-outline-light mt-3">Enquire About Groove HR</a>
             </div>
         </div>
-    </div>
-    <div class="clients-page section-entry">
+    </section>
+
+    <!-- 1.4 Portfolio / Clients -->
+    <section class="rb-section rb-portfolio" id="portfolio">
         <div class="container">
-            <!-- Clients Logos Section -->
-            <div class="row clients-logos">
-                <div class="col-lg-12 mb-3">
-                    <h2>
-                        Our Clientele
-                    </h2>
-                </div>
-                @foreach ($clients as $item)
-                <div class="col-xl-2 col-lg-3 col-md-4 col-sm-6 col-6 mb-4">
-                    <div class="client-box">
-                        <img src="{{ asset('storage/client/' . $item->image) }}"
-                            class="img-fluid client-logo" alt="Clients" loading="lazy">
+            <div class="rb-section-head text-center">
+                <span class="rb-tag">Our Work</span>
+                <h2>Portfolio &amp; Clients Attended Till Now</h2>
+                <p class="rb-section-desc">
+                    A preview of websites, SEO, social media, and branding work Digilinkers has already handled.
+                </p>
+            </div>
+
+            @if($portfolios->count())
+            <div class="row">
+                @foreach($portfolios as $item)
+                <div class="col-lg-4 col-md-6 col-sm-12 mb-4">
+                    <div class="rb-portfolio-card">
+                        <div class="rb-portfolio-img">
+                            <img src="{{ asset('storage/portfolio/' . $item->image) }}" class="img-fluid" alt="{{ $item->title }}" loading="lazy">
+                        </div>
+                        <div class="rb-portfolio-body">
+                            @if($item->type)
+                            <span class="rb-portfolio-badge">{{ ucfirst($item->type) }}</span>
+                            @endif
+                            <h5>{{ $item->title }}</h5>
+                            @if($item->link)
+                            <a href="{{ $item->link }}" target="_blank" class="rb-card-link-txt">View Work <i class="fa-solid fa-arrow-right-long"></i></a>
+                            @endif
+                        </div>
                     </div>
                 </div>
                 @endforeach
             </div>
-        </div>
-    </div>
+            @endif
 
-    <div class="faq-wrapper section-entry">
+            <div class="text-center mt-3">
+                <a href="{{ url('portfolio') }}" class="rb-btn rb-btn-outline">View Portfolio</a>
+            </div>
+
+            @if($clients->count())
+            <div class="rb-clients-row">
+                @foreach ($clients as $item)
+                <div class="rb-client-logo">
+                    <img src="{{ asset('storage/client/' . $item->image) }}" class="img-fluid" alt="Client" loading="lazy">
+                </div>
+                @endforeach
+            </div>
+            @endif
+        </div>
+    </section>
+
+    <!-- 1.5 Contact Enquiry -->
+    <section class="rb-section rb-enquiry" id="contact">
+        <span class="rb-glow-orb rb-glow-blue rb-glow-orb-7"></span>
+        <span class="rb-glow-orb rb-glow-yellow rb-glow-orb-8"></span>
+
         <div class="container">
-            <div class="row">
-                <div class="col-lg-12 col-md-12 col-sm-12">
-                    <div class="faq-header">
-                        <h6>FAQ</h6>
-                        <h3>Frequently Asked Questions</h3>
-                    </div>
+            <div class="row align-items-center">
+                <div class="col-lg-5 col-md-12 mb-4 mb-lg-0">
+                    <span class="rb-tag rb-tag-light">Get In Touch</span>
+                    <h2 class="text-white">Ready to grow your digital presence?</h2>
+                    <p class="rb-enquiry-desc">
+                        Let's build the right plan for your business. Tell us a bit about what you need and
+                        our team will get back to you shortly.
+                    </p>
+                    <ul class="rb-enquiry-contact">
+                        <li><i class="fa-solid fa-phone"></i> <a href="tel:+91-9818000334">+91-9818000334</a></li>
+                        <li><i class="fa-solid fa-envelope"></i> <a href="mailto:contactus@digilinkers.com">contactus@digilinkers.com</a></li>
+                    </ul>
                 </div>
-                <div class="col-lg-6 col-md-6 col-sm-12">
-                    <div class="faq-content">
-                        <div class="faq-item active">
-                            <h4 class="faq-question">What services do you offer?</h4>
-                            <div class="faq-answer">
-                                <p>We offer a wide range of digital marketing services including SEO, social media
-                                    marketing, web design, PPC, and content marketing.</p>
+                <div class="col-lg-7 col-md-12">
+                    <div class="rb-enquiry-form-wrap">
+                        <div id="formErrors" class="text-danger mb-3"></div>
+                        <div id="formSuccess" class="text-success mb-3"></div>
+
+                        <form id="quoteForm" action="{{ route('quote.send') }}" method="POST">
+                            @csrf
+                            <input type="hidden" name="source_page" value="{{ url()->current() }}">
+                            <div class="row">
+                                <div class="col-md-6 form-group">
+                                    <input type="text" name="name" placeholder="Name*" required>
+                                </div>
+                                <div class="col-md-6 form-group">
+                                    <input type="tel" name="phone" placeholder="Phone Number*" required>
+                                </div>
+                                <div class="col-md-6 form-group">
+                                    <input type="email" name="email" placeholder="Email*" required>
+                                </div>
+                                <div class="col-md-6 form-group">
+                                    <input type="text" name="company" placeholder="Company Name">
+                                </div>
+                                <div class="col-md-12 form-group">
+                                    <select name="service">
+                                        <option value="">Service Required</option>
+                                        <option value="SEO">SEO</option>
+                                        <option value="SMO">SMO</option>
+                                        <option value="Graphic Design">Graphic Design</option>
+                                        <option value="Website Development">Website Development</option>
+                                        <option value="Groove HR">Groove HR</option>
+                                        <option value="Industry Marketing">Industry Marketing</option>
+                                        <option value="Other">Other</option>
+                                    </select>
+                                </div>
+                                <div class="col-md-12 form-group">
+                                    <textarea name="requirement" rows="4" placeholder="Message*" required></textarea>
+                                </div>
                             </div>
-                        </div>
-                        <div class="faq-item">
-                            <h4 class="faq-question">How can I contact you?</h4>
-                            <div class="faq-answer">
-                                <p>You can contact us through our website or by email at contactus@digilinkers.com
-                                </p>
-                            </div>
-                        </div>
-                        <div class="faq-item">
-                            <h4 class="faq-question">What makes your company stand out?</h4>
-                            <div class="faq-answer">
-                                <p>Our personalized approach to every client ensures we tailor solutions that
-                                    specifically address your business needs and goals.</p>
-                            </div>
-                        </div>
-                        <div class="faq-item">
-                            <h4 class="faq-question">What is the timeline for SEO results?</h4>
-                            <div class="faq-answer">
-                                <p>SEO is a long-term strategy and it typically takes 3 to 6 months to see
-                                    significant results depending on your business niche and goals.</p>
-                            </div>
-                        </div>
+                            <button type="submit" class="rb-btn rb-btn-primary w-100">Submit Enquiry</button>
+                        </form>
                     </div>
-                </div>
-                <div class="col-lg-6 col-md-6 col-sm-12">
-                    <div class="hm-faq-img"></div>
                 </div>
             </div>
         </div>
-    </div>
+    </section>
 
- @include('components.cta')
+    <!-- 1.6 Links to Other Sections -->
+    <section class="rb-links-strip">
+        <div class="container">
+            <ul>
+                <li><a href="#be-found">Be Found</a></li>
+                <li><a href="#be-built">Be Built</a></li>
+                <li><a href="#be-organized">Be Organized</a></li>
+                <li><a href="{{ url('about-us') }}">About Us</a></li>
+                <li><a href="{{ url('blog') }}">Blogs</a></li>
+                <li><a href="{{ url('portfolio') }}">Portfolio</a></li>
+                <li><a href="{{ url('contact-us') }}">Contact Us</a></li>
+            </ul>
+        </div>
+    </section>
 
 </main>
-
 
 @endsection

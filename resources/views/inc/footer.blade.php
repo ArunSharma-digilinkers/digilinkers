@@ -59,6 +59,9 @@
                                 <a href="{{ url('portfolio') }}">Portfolio</a>
                             </li>
                             <li>
+                                <a href="{{ url('blog') }}">Blog</a>
+                            </li>
+                            <li>
                                 <a href="{{ url('contact-us') }}">Contact</a>
                             </li>
                               <li>

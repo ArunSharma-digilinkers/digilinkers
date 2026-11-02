@@ -1,4 +1,4 @@
-*,
+﻿*,
 *::before,
 *::after {
     box-sizing: border-box;
@@ -3239,7 +3239,7 @@ a {
     }
 
     li::before {
-        content: "✔";
+        content: "âœ”";
         position: absolute;
         left: 0;
         top: 0;
@@ -3974,9 +3974,9 @@ a {
     color: #fff;
 }
 
-/* Change + to − */
+/* Change + to âˆ’ */
 .accordion-button:not(.collapsed)::after {
-    content: "−";
+    content: "âˆ’";
     color: #fff;
 }
 
@@ -4085,7 +4085,7 @@ a {
 
 /* Custom bullet */
 .service-card ul li::before {
-    content: "✔";
+    content: "âœ”";
     position: absolute;
     left: 0;
     color: #0f38b6;
@@ -4553,3 +4553,850 @@ a {
         text-transform: uppercase;
     }
 }
+
+/*========================================================================
+  Home Redesign — "Be Found. Be Built. Be Organized." (rb- prefix)
+  Style: bold gradient + glow — glass panels, glowing accent orbs,
+  floating cards.
+========================================================================*/
+
+$glow-blue: #3b82f6;
+$glow-purple: #8b5cf6;
+$glow-yellow: $color-yellow;
+
+// anchor offset so the fixed navbar never covers a jumped-to section
+#why-digital,
+#how-we-help,
+#be-found,
+#be-built,
+#be-organized,
+#portfolio,
+#contact {
+    scroll-margin-top: 110px;
+}
+
+.nav-item-cta {
+    margin-left: 10px;
+
+    .nav-cta-btn {
+        display: inline-block;
+        background: linear-gradient(90deg, rgb(18, 11, 103) 43%, rgb(15, 81, 161) 67%);
+        color: $color-white !important;
+        font-weight: 700;
+        font-size: 15px;
+        padding: 10px 26px;
+        border-radius: 50px;
+        transition: all 0.3s ease-in-out;
+
+        &:hover {
+            background: linear-gradient(90deg, rgb(15, 81, 161) 43%, rgb(18, 11, 103) 67%);
+            color: $color-white !important;
+        }
+    }
+}
+
+/* ---------- Glow orbs (shared decoration) ---------- */
+.rb-glow-orb {
+    position: absolute;
+    border-radius: 50%;
+    filter: blur(70px);
+    pointer-events: none;
+    z-index: 0;
+}
+
+.rb-glow-blue {
+    background: radial-gradient(circle, rgba(59, 130, 246, 0.55), transparent 70%);
+}
+
+.rb-glow-purple {
+    background: radial-gradient(circle, rgba(139, 92, 246, 0.5), transparent 70%);
+}
+
+.rb-glow-yellow {
+    background: radial-gradient(circle, rgba(253, 188, 0, 0.4), transparent 70%);
+}
+
+.rb-glow-orb-soft {
+    opacity: 0.35;
+}
+
+/* hero orbs */
+.rb-glow-orb-1 { width: 420px; height: 420px; top: -140px; right: -80px; }
+.rb-glow-orb-2 { width: 320px; height: 320px; bottom: -100px; left: -60px; }
+.rb-glow-orb-3 { width: 260px; height: 260px; top: 40%; right: 20%; opacity: 0.4; }
+
+/* why-industries orbs */
+.rb-glow-orb-tr { width: 360px; height: 360px; top: -120px; right: -100px; }
+.rb-glow-orb-bl { width: 300px; height: 300px; bottom: -100px; left: -80px; }
+
+/* pillars orbs */
+.rb-glow-orb-4 { width: 380px; height: 380px; top: -100px; left: -80px; }
+.rb-glow-orb-5 { width: 300px; height: 300px; bottom: 10%; right: -100px; }
+.rb-glow-orb-6 { width: 240px; height: 240px; top: 45%; left: 45%; opacity: 0.28; }
+
+/* enquiry orbs */
+.rb-glow-orb-7 { width: 360px; height: 360px; top: -120px; left: 10%; }
+.rb-glow-orb-8 { width: 280px; height: 280px; bottom: -100px; right: 5%; }
+
+/* ---------- Buttons ---------- */
+.rb-btn {
+    position: relative;
+    z-index: 1;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    padding: 14px 32px;
+    border-radius: 50px;
+    font-weight: 700;
+    font-size: 16px;
+    border: 2px solid transparent;
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+
+    &.rb-btn-primary {
+        background: linear-gradient(90deg, $color-yellow, #ffd84d);
+        color: $secondary-color !important;
+        box-shadow: 0 12px 30px rgba(253, 188, 0, 0.35);
+
+        &:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 16px 36px rgba(253, 188, 0, 0.45);
+        }
+    }
+
+    &.rb-btn-secondary {
+        background: rgba(255, 255, 255, 0.08);
+        border-color: rgba(255, 255, 255, 0.4);
+        color: $color-white !important;
+        backdrop-filter: blur(6px);
+
+        &:hover {
+            background: rgba(255, 255, 255, 0.16);
+            border-color: $color-white;
+        }
+    }
+
+    &.rb-btn-outline {
+        background: transparent;
+        border-color: $primary-color;
+        color: $primary-color !important;
+
+        &:hover {
+            background: $primary-color;
+            color: $color-white !important;
+        }
+    }
+
+    &.rb-btn-outline-light {
+        background: transparent;
+        border-color: rgba(255, 255, 255, 0.5);
+        color: $color-white !important;
+
+        &:hover {
+            background: $color-white;
+            color: $secondary-color !important;
+        }
+    }
+}
+
+/* ---------- Section shells ---------- */
+.rb-section {
+    position: relative;
+    padding: 5.5rem 0;
+    overflow: hidden;
+
+    > .container {
+        position: relative;
+        z-index: 1;
+    }
+}
+
+.rb-hero {
+    position: relative;
+    overflow: hidden;
+}
+
+.rb-section-head {
+    position: relative;
+    z-index: 1;
+    max-width: 720px;
+    margin: 0 auto 3rem;
+
+    h2 {
+        font-size: 34px;
+        font-weight: 700;
+        margin: 14px 0 16px;
+    }
+}
+
+.rb-tag {
+    display: inline-block;
+    color: $primary-color;
+    background: rgba(6, 77, 188, 0.08);
+    font-weight: 700;
+    font-size: 13px;
+    letter-spacing: 0.5px;
+    text-transform: uppercase;
+    padding: 6px 18px;
+    border-radius: 50px;
+
+    &.rb-tag-light {
+        color: $color-yellow;
+        background: rgba(255, 255, 255, 0.1);
+    }
+}
+
+.rb-section-desc {
+    font-size: 17px;
+    color: #555;
+
+    &.rb-section-desc-light {
+        color: rgba(255, 255, 255, 0.75);
+    }
+}
+
+/* ---------- Hero ---------- */
+.rb-hero {
+    padding: 7rem 0 6rem;
+    background: linear-gradient(135deg, rgb(11, 15, 47) 0%, rgb(18, 11, 103) 45%, rgb(15, 81, 161) 100%);
+
+    &::before {
+        content: "";
+        position: absolute;
+        inset: 0;
+        background-image: radial-gradient(rgba(255, 255, 255, 0.14) 1.5px, transparent 1.5px);
+        background-size: 26px 26px;
+        opacity: 0.4;
+        pointer-events: none;
+        z-index: 0;
+    }
+
+    > .container {
+        position: relative;
+        z-index: 1;
+    }
+}
+
+.rb-hero-text {
+    text-align: left;
+}
+
+.rb-eyebrow {
+    display: inline-block;
+    color: $color-white;
+    background: rgba(255, 255, 255, 0.12);
+    border: 1px solid rgba(255, 255, 255, 0.25);
+    font-size: 14px;
+    font-weight: 600;
+    padding: 8px 20px;
+    border-radius: 50px;
+    margin-bottom: 22px;
+}
+
+.rb-motto {
+    color: $color-white;
+    font-size: 50px;
+    font-weight: 800;
+    line-height: 1.2;
+    margin-bottom: 20px;
+
+    span {
+        background: linear-gradient(90deg, $color-yellow, #ffe38a);
+        -webkit-background-clip: text;
+        background-clip: text;
+        color: transparent;
+    }
+}
+
+.rb-hero-sub {
+    color: rgba(255, 255, 255, 0.85);
+    font-size: 18px;
+    max-width: 520px;
+    margin-bottom: 32px;
+}
+
+.rb-industry-chips {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    gap: 12px;
+    margin-bottom: 40px;
+    padding: 0;
+
+    li {
+        display: flex;
+        align-items: center;
+        gap: 8px;
+        color: $color-white;
+        font-weight: 600;
+        font-size: 15px;
+        background: rgba(255, 255, 255, 0.1);
+        border: 1px solid rgba(255, 255, 255, 0.2);
+        padding: 10px 20px;
+        border-radius: 50px;
+
+        i {
+            color: $color-yellow;
+        }
+    }
+}
+
+.rb-hero-actions {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    gap: 16px;
+}
+
+/* ---------- Hero floating cards ---------- */
+@keyframes rbFloat {
+    0%, 100% { transform: translateY(0) rotate(var(--rot, 0deg)); }
+    50% { transform: translateY(-16px) rotate(var(--rot, 0deg)); }
+}
+
+.rb-hero-visual {
+    position: relative;
+    height: 460px;
+}
+
+.rb-hero-visual-ring {
+    position: absolute;
+    width: 340px;
+    height: 340px;
+    border: 1px dashed rgba(255, 255, 255, 0.15);
+    border-radius: 50%;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 0;
+}
+
+.rb-float-card {
+    position: absolute;
+    z-index: 1;
+    width: 220px;
+    background: rgba(255, 255, 255, 0.08);
+    border: 1px solid rgba(255, 255, 255, 0.18);
+    backdrop-filter: blur(18px);
+    -webkit-backdrop-filter: blur(18px);
+    border-radius: 18px;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+    color: $color-white !important;
+    text-decoration: none !important;
+    animation: rbFloat 6s ease-in-out infinite;
+    transition: all 0.3s ease-in-out;
+
+    &:hover {
+        transform: translateY(-6px) scale(1.04) !important;
+        border-color: rgba(255, 255, 255, 0.4);
+    }
+}
+
+.rb-float-icon {
+    width: 40px;
+    height: 40px;
+    border-radius: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: rgba(255, 255, 255, 0.15);
+    font-size: 16px;
+    margin-bottom: 4px;
+}
+
+.rb-float-title {
+    font-weight: 700;
+    font-size: 16px;
+}
+
+.rb-float-sub {
+    font-size: 12px;
+    color: rgba(255, 255, 255, 0.7);
+}
+
+.rb-float-card-a {
+    top: 0;
+    left: 8%;
+    --rot: -4deg;
+    animation-delay: 0s;
+    box-shadow: 0 20px 45px rgba(59, 130, 246, 0.35);
+}
+
+.rb-float-card-b {
+    top: 165px;
+    left: 40%;
+    --rot: 3deg;
+    animation-delay: 1.2s;
+    box-shadow: 0 20px 45px rgba(139, 92, 246, 0.35);
+}
+
+.rb-float-card-c {
+    top: 330px;
+    left: 6%;
+    --rot: -2deg;
+    animation-delay: 2.4s;
+    box-shadow: 0 20px 45px rgba(253, 188, 0, 0.35);
+}
+
+/* ---------- Why These Industries ---------- */
+.rb-why {
+    background: $color-white;
+}
+
+.rb-checklist-grid {
+    position: relative;
+    z-index: 1;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 16px;
+    max-width: 980px;
+    margin: 0 auto 3.5rem;
+}
+
+.rb-checklist-item {
+    display: flex;
+    align-items: flex-start;
+    gap: 10px;
+    font-size: 16px;
+    font-weight: 500;
+    color: #222;
+
+    i {
+        color: $primary-color;
+        margin-top: 3px;
+    }
+}
+
+.rb-industry-grid {
+    position: relative;
+    z-index: 1;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 24px;
+}
+
+.rb-industry-card {
+    position: relative;
+    overflow: hidden;
+    display: block;
+    background: $color-white;
+    border: 1px solid #ececec;
+    border-radius: 16px;
+    padding: 32px 24px;
+    text-align: center;
+    transition: all 0.3s ease-in-out;
+    color: inherit;
+
+    &::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        height: 4px;
+        transform: scaleX(0);
+        transform-origin: left;
+        transition: transform 0.35s ease-in-out;
+    }
+
+    h4 {
+        font-weight: 700;
+        margin-bottom: 10px;
+    }
+
+    p {
+        font-size: 15px;
+        color: #666;
+        margin-bottom: 0;
+    }
+
+    &.rb-industry-card-link:hover {
+        transform: translateY(-8px);
+        border-color: transparent;
+
+        &::before {
+            transform: scaleX(1);
+        }
+    }
+
+    &--solar {
+        &::before { background: linear-gradient(90deg, #f59e0b, $color-yellow); }
+        .rb-industry-icon { background: linear-gradient(135deg, rgba(245, 158, 11, 0.15), rgba(253, 188, 0, 0.15)); color: #f59e0b; }
+    }
+
+    &--battery {
+        &::before { background: linear-gradient(90deg, #10b981, #06b6d4); }
+        .rb-industry-icon { background: linear-gradient(135deg, rgba(16, 185, 129, 0.15), rgba(6, 182, 212, 0.15)); color: #10b981; }
+        &:hover { box-shadow: 0 20px 40px rgba(16, 185, 129, 0.18); }
+    }
+
+    &--lithium {
+        &::before { background: linear-gradient(90deg, $glow-purple, #6366f1); }
+        .rb-industry-icon { background: linear-gradient(135deg, rgba(139, 92, 246, 0.15), rgba(99, 102, 241, 0.15)); color: $glow-purple; }
+    }
+
+    &--ev {
+        &::before { background: linear-gradient(90deg, $glow-blue, #0ea5e9); }
+        .rb-industry-icon { background: linear-gradient(135deg, rgba(59, 130, 246, 0.15), rgba(14, 165, 233, 0.15)); color: $glow-blue; }
+        &:hover { box-shadow: 0 20px 40px rgba(59, 130, 246, 0.18); }
+    }
+}
+
+.rb-industry-icon {
+    width: 64px;
+    height: 64px;
+    margin: 0 auto 18px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    font-size: 26px;
+}
+
+.rb-card-link-txt {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    margin-top: 14px;
+    font-weight: 700;
+    font-size: 14px;
+    color: $primary-color;
+}
+
+/* ---------- Pillars: Be Found / Be Built / Be Organized ---------- */
+.rb-pillars-wrapper {
+    background: linear-gradient(180deg, rgb(11, 15, 47) 0%, rgb(15, 22, 66) 100%);
+}
+
+.rb-pillar {
+    position: relative;
+    z-index: 1;
+    background: rgba(255, 255, 255, 0.05);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(16px);
+    -webkit-backdrop-filter: blur(16px);
+    border-radius: 20px;
+    padding: 40px;
+    margin-bottom: 28px;
+    border-left: 4px solid var(--accent, #{$color-yellow});
+    transition: all 0.3s ease-in-out;
+
+    &:hover {
+        box-shadow: 0 20px 50px var(--accent-shadow, rgba(253, 188, 0, 0.15));
+    }
+
+    &:last-child {
+        margin-bottom: 0;
+    }
+
+    h3, p {
+        color: $color-white;
+    }
+
+    p {
+        color: rgba(255, 255, 255, 0.7);
+    }
+
+    &--found { --accent: #{$glow-blue}; --accent-shadow: rgba(59, 130, 246, 0.2); }
+    &--built { --accent: #{$glow-purple}; --accent-shadow: rgba(139, 92, 246, 0.2); }
+    &--organized { --accent: #{$color-yellow}; --accent-shadow: rgba(253, 188, 0, 0.2); }
+}
+
+.rb-pillar-head {
+    display: flex;
+    align-items: flex-start;
+    gap: 20px;
+    margin-bottom: 24px;
+
+    h3 {
+        font-size: 26px;
+        font-weight: 700;
+        margin-bottom: 6px;
+    }
+
+    p {
+        margin-bottom: 0;
+    }
+}
+
+.rb-pillar-index {
+    font-size: 15px;
+    font-weight: 800;
+    color: $color-white;
+    background: var(--accent, #{$secondary-color});
+    width: 44px;
+    height: 44px;
+    min-width: 44px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    box-shadow: 0 8px 20px var(--accent-shadow, transparent);
+}
+
+.rb-pillar-chips {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    padding: 0;
+
+    li {
+        a,
+        span {
+            display: inline-block;
+            font-size: 14px;
+            font-weight: 600;
+            padding: 9px 18px;
+            border-radius: 50px;
+            background: rgba(255, 255, 255, 0.08);
+            color: $color-white;
+            border: 1px solid rgba(255, 255, 255, 0.08);
+            transition: all 0.25s ease-in-out;
+        }
+
+        a:hover {
+            background: var(--accent, $primary-color);
+            border-color: transparent;
+            color: #05070f;
+        }
+
+        span {
+            color: rgba(255, 255, 255, 0.55);
+        }
+    }
+}
+
+/* ---------- Portfolio ---------- */
+.rb-portfolio-card {
+    background: $color-white;
+    border: 1px solid #ececec;
+    border-radius: 16px;
+    overflow: hidden;
+    height: 100%;
+    transition: all 0.3s ease-in-out;
+
+    &:hover {
+        box-shadow: 0 20px 45px rgba(6, 77, 188, 0.15);
+        transform: translateY(-6px);
+    }
+}
+
+.rb-portfolio-img {
+    aspect-ratio: 16/10;
+    overflow: hidden;
+
+    img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
+}
+
+.rb-portfolio-body {
+    padding: 20px;
+
+    h5 {
+        font-weight: 700;
+        margin: 8px 0 0;
+    }
+}
+
+.rb-portfolio-badge {
+    display: inline-block;
+    font-size: 12px;
+    font-weight: 700;
+    text-transform: uppercase;
+    color: $color-yellow;
+    background: $secondary-color;
+    padding: 4px 12px;
+    border-radius: 50px;
+}
+
+.rb-clients-row {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    gap: 30px;
+    margin-top: 3.5rem;
+    padding-top: 3rem;
+    border-top: 1px solid #eee;
+
+    img {
+        max-height: 46px;
+        width: auto;
+        filter: grayscale(100%);
+        opacity: 0.7;
+        transition: all 0.3s ease-in-out;
+
+        &:hover {
+            filter: none;
+            opacity: 1;
+        }
+    }
+}
+
+/* ---------- Enquiry ---------- */
+.rb-enquiry {
+    background: linear-gradient(135deg, rgb(11, 15, 47) 0%, rgb(18, 11, 103) 100%);
+
+    h2 {
+        font-size: 32px;
+        font-weight: 700;
+        margin: 14px 0 16px;
+    }
+}
+
+.rb-enquiry-desc {
+    color: rgba(255, 255, 255, 0.8);
+    font-size: 16px;
+}
+
+.rb-enquiry-contact {
+    padding: 0;
+    margin-top: 24px;
+
+    li {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+        margin-bottom: 12px;
+
+        i {
+            color: $color-yellow;
+        }
+
+        a {
+            color: $color-white;
+            font-weight: 600;
+        }
+    }
+}
+
+.rb-enquiry-form-wrap {
+    position: relative;
+    z-index: 1;
+    background: $color-white;
+    border-radius: 20px;
+    padding: 36px;
+    box-shadow: 0 30px 70px rgba(0, 0, 0, 0.35);
+
+    .form-group {
+        margin-bottom: 18px;
+    }
+
+    input,
+    select,
+    textarea {
+        width: 100%;
+        border: 1px solid #e2e2e2;
+        border-radius: 10px;
+        padding: 14px 16px;
+        font-size: 15px;
+        background: $light-color;
+        transition: all 0.25s ease-in-out;
+
+        &:focus {
+            outline: none;
+            border-color: $primary-color;
+            background: $color-white;
+            box-shadow: 0 0 0 3px rgba(6, 77, 188, 0.12);
+        }
+    }
+}
+
+/* ---------- Links Strip ---------- */
+.rb-links-strip {
+    background: $secondary-color;
+    padding: 22px 0;
+
+    ul {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 10px 30px;
+        margin: 0;
+        padding: 0;
+    }
+
+    a {
+        color: rgba(255, 255, 255, 0.75);
+        font-weight: 600;
+        font-size: 14px;
+
+        &:hover {
+            color: $color-yellow;
+        }
+    }
+}
+
+@media (max-width: 991px) {
+    .rb-hero-text,
+    .rb-industry-chips,
+    .rb-hero-actions {
+        text-align: center;
+        justify-content: center;
+    }
+
+    .rb-hero-sub {
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .rb-hero-visual {
+        height: auto;
+        display: flex;
+        flex-direction: column;
+        gap: 16px;
+        margin-top: 48px;
+    }
+
+    .rb-float-card {
+        position: static;
+        width: 100%;
+        animation: none;
+    }
+
+    .rb-hero-visual-ring {
+        display: none;
+    }
+
+    .rb-motto {
+        font-size: 40px;
+    }
+
+    .rb-industry-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .rb-checklist-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .rb-pillar {
+        padding: 28px 22px;
+    }
+
+    .rb-pillar-head {
+        flex-direction: column;
+    }
+}
+
+@media (max-width: 575px) {
+    .rb-motto {
+        font-size: 32px;
+    }
+
+    .rb-industry-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .rb-enquiry-form-wrap {
+        padding: 24px;
+    }
+}
+
